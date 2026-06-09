@@ -293,7 +293,7 @@ app.get('/api/admin/export/csv', auth, async (req, res) => {
 initDB()
   .then(() => {
     app.listen(PORT, () => {
-      console.log(`\n🚀 Server → http://localhost:${PORT}`);
+      console.log(`\n🚀 Server → https://std-web-9w6q.onrender.com:${PORT}`);
       console.log(`📦 PostgreSQL connected`);
       console.log(`🖼  Cloudinary storage active\n`);
     });
