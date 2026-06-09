@@ -1,3 +1,21 @@
+const express = require('express');
+const cors = require('cors');
+const app = express();
+
+// Allow requests from your Netlify frontend
+app.use(cors({
+  origin: 'https://heartfelt-dasik-5b4927.netlify.app',
+  methods: ['GET', 'POST', 'PUT', 'DELETE'],
+  credentials: true
+}));
+
+// Example route
+app.post('/api/admin/login', (req, res) => {
+  res.json({ message: 'Login successful' });
+});
+
+app.listen(3000, () => console.log('Server running'));
+
 require('dotenv').config();
 const express    = require('express');
 const { Pool }   = require('pg');
